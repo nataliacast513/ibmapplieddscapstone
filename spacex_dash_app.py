@@ -92,7 +92,7 @@ def get_scatter_chart(entered_site,payload_range):
         filtered_df = filtered_df[filtered_df['Launch Site']==entered_site]
         fig=px.scatter(filtered_df, x='Payload Mass (kg)', y='class',
             color='Booster Version Category',
-            title='Correlation between Payload and Success for {entered_site}'
+            title=f'Correlation between Payload and Success for {entered_site}'
         )
         return fig
 
